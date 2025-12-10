@@ -268,3 +268,7 @@ flutter test test/widgets/
 - **Widgets**: CurrentWeatherCard
 
 ![Search Screen](https://res.cloudinary.com/dmnkakpnb/image/upload/v1765389759/test_ru9pjw.png)
+
+# **🎬 Video Demo**
+
+[**👉 Xem Video Demo tại đây 👈**](https://res.cloudinary.com/dmnkakpnb/video/upload/v1765391113/demo-weather_kigfjx.mp4)
