@@ -58,39 +58,47 @@ Một ứng dụng thời tiết đẹp mắt, đầy đủ tính năng được
 
 ```
 lib/
-├── main.dart
-├── config/
-│   └── api_config.dart
-├── models/
-│   ├── weather_model.dart
-│   ├── forecast_model.dart
-│   ├── location_model.dart
-│   └── hourly_weather_model.dart
-├── providers/
-│   ├── weather_provider.dart
-│   ├── location_provider.dart
-│   └── settings_provider.dart
-├── screens/
-│   ├── home_screen.dart
-│   ├── search_screen.dart
-│   ├── forecast_screen.dart
-│   └── settings_screen.dart
-├── services/
-│   ├── weather_service.dart
-│   ├── location_service.dart
-│   ├── storage_service.dart
-│   └── connectivity_service.dart
-├── utils/
-│   ├── constants.dart
-│   ├── date_formatter.dart
-│   └── weather_icons.dart
-└── widgets/
-    ├── current_weather_card.dart
-    ├── hourly_forecast_list.dart
-    ├── daily_forecast_card.dart
-    ├── weather_detail_item.dart
-    ├── loading_shimmer.dart
-    └── error_widget.dart
+│   main.dart
+│   
+├───config
+│       api_config.dart
+│       
+├───models
+│       forecast_model.dart      
+│       hourly_weather_model.dart
+│       location_model.dart      
+│       weather_model.dart       
+│
+├───providers
+│       location_provider.dart
+│       settings_provider.dart
+│       weather_provider.dart
+│       
+├───screens
+│       forecast_screen.dart
+│       home_screen.dart
+│       search_screen.dart
+│       settings_screen.dart
+│       
+├───services
+│       connectivity_service.dart
+│       language_service.dart
+│       location_service.dart
+│       storage_service.dart
+│       weather_service.dart
+│       
+├───utils
+│       constants.dart
+│       date_formatter.dart
+│       weather_icons.dart
+│       
+└───widgets
+        current_weather_card.dart
+        daily_forecast_card.dart
+        error_widget.dart
+        hourly_forecast_list.dart
+        loading_shimmer.dart
+        weather_detail_item.dart
 ```
 
 ## 🚀 Cài Đặt
@@ -104,8 +112,8 @@ lib/
 
 1. **Clone repository**
 ```bash
-git clone https://github.com/yourusername/weather-app.git
-cd weather-app
+git clone https://github.com/Kiet1122/flutter_weather_app_NguyenTatKiet.git
+cd weatherapp
 ```
 
 2. **Cài đặt dependencies**
@@ -124,12 +132,6 @@ OPENWEATHER_API_KEY=your_api_key_here
 ```bash
 # Chạy trên Android
 flutter run
-
-# Chạy trên iOS
-flutter run -d ios
-
-# Build release
-flutter build apk --release
 ```
 
 ## 🔑 Lấy API Key
@@ -152,10 +154,6 @@ flutter test test/providers/
 flutter test test/services/
 flutter test test/utils/
 flutter test test/widgets/
-
-# Chạy với coverage
-flutter test --coverage
-genhtml coverage/lcov.info -o coverage/html
 ```
 
 ### Kiểm Thử Thủ Công
@@ -201,16 +199,22 @@ genhtml coverage/lcov.info -o coverage/html
 - Dự báo hàng ngày (5 ngày)
 - Chi tiết thời tiết
 
+| ![Home Screen](https://res.cloudinary.com/dmnkakpnb/image/upload/v1765389759/home_chejo6.png) | ![Home Screen](https://res.cloudinary.com/dmnkakpnb/image/upload/v1765389759/home-1_a0thvg.png) |
+
 ### 🔍 Màn Hình Tìm Kiếm
 - Tìm kiếm thành phố
 - Lịch sử tìm kiếm
 - Thành phố yêu thích
+
+![Search Screen](https://res.cloudinary.com/dmnkakpnb/image/upload/v1765389940/search_vron4w.png)
 
 ### ⚙️ Màn Hình Cài Đặt
 - Đơn vị nhiệt độ
 - Đơn vị tốc độ gió
 - Định dạng thời gian
 - Ngôn ngữ
+
+![Search Screen](https://res.cloudinary.com/dmnkakpnb/image/upload/v1765389759/setting_injevj.png)
 
 ## 🌈 Chủ Đề & Màu Sắc
 
@@ -263,71 +267,4 @@ genhtml coverage/lcov.info -o coverage/html
 - **Utils**: DateFormatter, WeatherIcons
 - **Widgets**: CurrentWeatherCard
 
-### Test Coverage
-```
-✓ Models: 100%
-✓ Providers: 85%
-✓ Services: 80%
-✓ Utils: 100%
-✓ Widgets: 75%
-```
-
-## 📦 Build & Deployment
-
-### Build APK
-```bash
-flutter build apk --release
-```
-
-### Build App Bundle
-```bash
-flutter build appbundle --release
-```
-
-### Build iOS
-```bash
-flutter build ios --release
-```
-
-## 🤝 Đóng Góp
-
-1. Fork repository
-2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Mở Pull Request
-
-## 📝 Giấy Phép
-
-MIT License - xem file [LICENSE](LICENSE) để biết thêm chi tiết.
-
-## 🙏 Ghi Nhận
-
-- **OpenWeatherMap API** - Dữ liệu thời tiết
-- **Flutter** - Framework phát triển
-- **Material Design** - Design system
-
-## 📞 Liên Hệ
-
-- **Tác giả**: [Tên của bạn]
-- **Email**: your.email@example.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-
-## 🎯 Mục Tiêu Dự Án
-
-✅ **Đã hoàn thành**:
-- API integration với OpenWeatherMap
-- State management với Provider
-- Multi-language support
-- Offline caching
-- Unit testing
-
-🎯 **Mục tiêu tương lai**:
-- Thêm animations
-- Widget cho home screen
-- Integration với nhiều API
-- Push notifications
-
----
-
-**⭐ Nếu bạn thấy dự án hữu ích, hãy star repository này!**
+![Search Screen](https://res.cloudinary.com/dmnkakpnb/image/upload/v1765389759/test_ru9pjw.png)
